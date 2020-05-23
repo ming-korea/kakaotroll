@@ -11,49 +11,15 @@
   <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
   </a>
   <script type='text/javascript'>
-    //<![CDATA[
-      // // 사용할 앱의 JavaScript 키를 설정해 주세요.
-      Kakao.init('456b41b1caa5fe81eb1407fb8e990c17');
-      // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-      Kakao.Link.createDefaultButton({
-        container: '#CONTAINER_ID',
-        objectType: 'feed',
-      content: {
-        title: '디저트 사진',
-        description: '아메리카노, 빵, 케익',
-      imageUrl:
-        'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
-      link: {
-        mobileWebUrl: 'https://developers.kakao.com',
-        androidExecParams: 'test',
-      },  
-    },
-    social: {
-      likeCount: 10,
-      commentCount: 20,
-      sharedCount: 30,
-    },
-    buttons: [
-      {
-        title: '웹으로 이동',
-        link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-        },
-      },
-      {
-        title: '앱으로 이동',
-        link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-        },
-      },
-    ],
-    success: function(response) {
-      console.log(response);
-    },
-    fail: function(error) {
-      console.log(error);
+    Kakao.init('456b41b1caa5fe81eb1407fb8e990c17');
+    Kakao.Link.createCustomButton({
+      container: '#kakao-link-btn',
+      templateId: 435241,
+    templateArgs: {
+      'title': '제목 영역입니다.',
+      'description': '설명 영역입니다.'
     }
-  });
+    });
   </script>
 </body>
 </html>
